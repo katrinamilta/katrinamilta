@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>3D Gallery</title>
+    <title>3D Gallery with Hair</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <style>
       .hidden {
@@ -45,7 +45,18 @@
       
       <!-- Particle System (Hair) -->
       <a-entity position="0 1.6 -2">
-        <a-entity particle-system="preset: hair; color: #000; particleCount: 1000; size: 0.02;"></a-entity>
+        <a-entity particle-system="
+          preset: none;
+          texture: #hairTexture;
+          particleCount: 10000;
+          size: 0.1;
+          velocityValue: '0 0 0';
+          maxAge: 2;
+          opacity: 1;
+          color: #000;
+          randomizeParticleAngle: true;
+          randomizeParticleDirection: true;
+        "></a-entity>
       </a-entity>
       
       <!-- Camera -->

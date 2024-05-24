@@ -12,7 +12,7 @@
   <body>
     <a-scene vr-mode-ui="enabled: false">
       <a-assets>
-        <img id="photo1" src="./zilums.jpg" class="hidden"> <!-- Ensure this is a JPEG file -->
+        <img id="photo1" src="./zilumspng.png" class="hidden"> <!-- Ensure this is a JPEG file -->
         <img id="photo2" src="./zilums1.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
         <img id="photo3" src="./zilums2.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
       </a-assets>
@@ -22,7 +22,7 @@
       <a-light type="point" position="2 4 -3" intensity="1"></a-light>
 
       <!-- Floor -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#FFB6C1" shadow="receive: true"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#000" shadow="receive: true"></a-plane>
       
       <!-- Ceiling -->
       <a-plane position="0 5 0" rotation="90 0 0" width="10" height="10" color="#FFC0CB" shadow="receive: true"></a-plane>

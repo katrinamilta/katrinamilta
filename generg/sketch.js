@@ -1,37 +1,94 @@
-let angle = 0;
-let radius = 1;
-let wingdingsSymbols = ['', '', '', '', '', '', '', '', '', ''];
-let button;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  textFont('Wingdings');
-  textSize(32);
-  fill(0);
+  background(0);
+  stroke (255,100);
+  noFill (0);
+  let button = createButton('TVERT');
+  button.position(10, 10); // Position the button
+  button.mousePressed(takeScreenshot); 
   
-  // Create a button to save the screenshot
-  button = createButton('Save Screenshot');
-  button.position(10, 10);
-  button.mousePressed(saveScreenshot);
-}
 
-function draw() {
-  let x = width / 2 + cos(angle) * radius;
-  let y = height / 2 + sin(angle) * radius;
-  let symbol = random(wingdingsSymbols);
-  
-  text(symbol, x, y);
-  
-  angle += 0.1;
-  radius += 0.5;
-  
-  if (radius > width) {
-    clear();
-    angle = 0;
-    radius = 1;
-  }
-}
+frameRate=(10)}
 
-function saveScreenshot() {
-  saveCanvas('generative_art', 'png');
-}
+    function draw() {
+    
+   stroke(0, random(50)); //stars no 0/0 stura
+      noFill ();
+       bezier(0, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+    stroke(random(255), random(10)); //stars no 100/0 stura
+       noFill ();
+       bezier(windowWidth -1, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 0/100 stura
+       noFill ();
+       bezier(0, windowHeight -1, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 100/100 
+       noFill ();
+       bezier(windowWidth -1, windowHeight -1, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 0/50
+       noFill ();
+       bezier(0, windowHeight/2, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 50/0
+       noFill ();
+       bezier(windowWidth/2, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 100/50
+       noFill ();
+       bezier(windowWidth -1, windowHeight/2, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 50/100
+       noFill ();
+       bezier(windowWidth/2, windowHeight -1, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       
+       stroke (random(255), random(10)); //stars no 0/25
+       noFill ();
+       bezier(0, windowHeight/4, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 25/0
+       noFill ();
+       bezier(windowWidth/4, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 100/25
+       noFill ();
+       bezier(windowWidth -1, windowHeight/4, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 25/100
+       noFill ();
+       bezier(windowWidth/4, windowHeight -1, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       
+       stroke(random(255), random(10)); //stars no 0/75
+       noFill ();
+       bezier(0, (windowHeight/4)*3), random(100), random(100), random(100), random(100), random(2000), random(2000);
+
+       stroke (random(255), random(10)); //stars no 75/0
+       noFill ();
+       bezier((windowWidth/4)*3, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 100/75
+       noFill ();
+       bezier(windowWidth -1, (windowHeight/4)*3, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+       stroke (random(255), random(10)); //stars no 75/100
+       noFill ();
+       bezier((windowWidth/4)*3, windowHeight -1, random(100), random(100), random(100), random(100), random(2000), random(2000));
+
+
+  
+
+  
+
+
+    
+      }     
+      function takeScreenshot() {
+        saveCanvas('screenshot', 'png');
+      }
+
+    

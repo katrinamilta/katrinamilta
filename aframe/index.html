@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hair Simulation</title>
+    <title>3D Gallery</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <a-scene>
-      <!-- Camera -->
-      <a-entity id="camera" camera position="0 1.6 0" look-controls></a-entity>
-
-      <!-- Particle System for Hair -->
-      <a-entity particle-system="preset: hair; particleCount: 10000; velocityValue: 0.05; accelerationValue: 0.001"></a-entity>
-
-      <!-- Head (Sphere) -->
-      <a-sphere position="0 1.6 -3" radius="0.5" color="#ffcc66"></a-sphere>
+    <a-scene vr-mode-ui="enabled: false">
+      <a-assets>
+        <img id="photo1" src="./zilums.jpg" class="hidden"> <!-- Ensure this is a JPEG file -->
+        <img id="photo2" src="./zilums1.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
+        <img id="photo3" src="./zilums2.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
+      </a-assets>
 
       <!-- Lighting -->
-      <a-light type="ambient" color="#ffffff" intensity="0.5"></a-light>
+      <a-light type="ambient" color="#ffffff"></a-light>
       <a-light type="point" position="2 4 -3" intensity="1"></a-light>
 
       <!-- Floor -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#333"></a-plane>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#FFB6C1" shadow="receive: true"></a-plane>
+      
+      <!-- Ceiling -->
+      <a-plane position="0 5 0" rotation="90 0 0" width="10" height="10" color="#FFC0CB" shadow="receive: true"></a-plane>
+
+      <!-- Walls -->
+      <a-plane position="0 2.5 -5" width="10" height="5" color="#FFF"></a-plane>
+      <a-plane position="0 2.5 5" rotation="0 180 0" width="10" height="5" color="#FFF"></a-plane>
+      <a-plane position="-5 2.5 0" rotation="0 90 0" width="10" height="5" color="#FFF"></a-plane>
+      <a-plane position="5 2.5 0" rotation="0 -90 0" width="10" height="5" color="#FFF"></a-plane>
+      
+      <!-- Photographs -->
+      <a-plane position="0 2.5 -4.95" width="4" height="3" material="src: #photo1"></a-plane>
+      <a-plane position="-4.95 2.5 0" rotation="0 90 0" width="4" height="3" material="src: #photo2"></a-plane>
+      <a-plane position="4.95 2.5 0" rotation="0 -90 0" width="4" height="3" material="src: #photo3"></a-plane>
+      
+      <!-- Head (Custom Geometry) -->
+      <a-entity geometry="primitive: sphere; radius: 0.3" position="0 1 -3" material="color: #ffcc66"></a-entity>
+      
+      <!-- Particle System for Hair -->
+      <a-entity particle-system="preset: hair; particleCount: 10000; velocityValue: 0.05; accelerationValue: 0.001" position="0 1 -3"></a-entity>
+      
+      <!-- Camera -->
+      <a-entity id="camera" camera look-controls="max-pitch: 90" position="0 1.8 0"></a-entity>
     </a-scene>
   </body>
 </html>

@@ -12,10 +12,10 @@
   <body>
     <a-scene vr-mode-ui="enabled: false">
       <a-assets>
-        <img id="photo1" src="./zilums.jpg" class="hidden"> <!-- Ensure this is a JPEG file -->
-        <img id="photo2" src="./zilums1.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
-        <img id="photo3" src="./zilums2.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
-        <img id="hairTexture" src="./hair_texture.png">
+        <img id="photo1" src="./zilums.jpg" class="hidden">
+        <img id="photo2" src="./zilums1.jpeg" class="hidden">
+        <img id="photo3" src="./zilums2.jpeg" class="hidden">
+        <img id="hairTexture" src="./hair_texture.png" class="hidden">
       </a-assets>
 
       <!-- Lighting -->
@@ -39,11 +39,11 @@
       <a-plane position="-4.95 2.5 0" rotation="0 90 0" width="4" height="3" material="src: #photo2"></a-plane>
       <a-plane position="4.95 2.5 0" rotation="0 -90 0" width="4" height="3" material="src: #photo3"></a-plane>
       
-      <!-- Head (Custom Geometry) -->
-      <a-entity geometry="primitive: sphere; radius: 0.8" position="0 1 -1.5" material="color: #ffcc66"></a-entity>
+      <!-- Head (Sphere) -->
+      <a-entity id="head" geometry="primitive: sphere; radius: 0.8" position="0 1 -1.5" material="color: #ffcc66"></a-entity>
       
-      <!-- Particle System (Hair) -->
-      <a-entity id="hair" position="0 1.6 -1.5"></a-entity>
+      <!-- Hair (Planes) -->
+      <a-entity id="hair-entity"></a-entity>
       
       <!-- Camera -->
       <a-entity id="camera" camera look-controls="max-pitch: 90" position="0 1.8 0"></a-entity>
@@ -53,35 +53,31 @@
       AFRAME.registerComponent('hair', {
         schema: {
           texture: {type: 'string', default: '#hairTexture'},
-          particleCount: {type: 'int', default: 1000},
-          particleSize: {type: 'number', default: 0.1}
+          strandCount: {type: 'int', default: 100}
         },
         init: function () {
           const data = this.data;
           const el = this.el;
 
-          const particles = new THREE.Geometry();
-          const material = new THREE.PointsMaterial({
-            size: data.particleSize,
-            map: document.querySelector(data.texture),
-            transparent: true,
-            depthWrite: false
-          });
-
-          for (let i = 0; i < data.particleCount; i++) {
-            const vertex = new THREE.Vector3();
-            vertex.x = (Math.random() * 2 - 1) * 0.8;
-            vertex.y = (Math.random() * 2 - 1) * 0.8;
-            vertex.z = (Math.random() * 2 - 1) * 0.8;
-            particles.vertices.push(vertex);
+          for (let i = 0; i < data.strandCount; i++) {
+            const angle = (i / data.strandCount) * Math.PI * 2;
+            const hair = document.createElement('a-plane');
+            hair.setAttribute('src', data.texture);
+            hair.setAttribute('width', 0.1);
+            hair.setAttribute('height', 0.4);
+            hair.setAttribute('position', {
+              x: Math.cos(angle) * 0.9,
+              y: Math.random() * 0.8 - 0.4,
+              z: Math.sin(angle) * 0.9
+            });
+            hair.setAttribute('rotation', {x: 0, y: -angle * (180 / Math.PI), z: 0});
+            hair.setAttribute('material', 'transparent: true; opacity: 0.9; side: double');
+            el.appendChild(hair);
           }
-
-          const particleSystem = new THREE.Points(particles, material);
-          el.setObject3D('mesh', particleSystem);
         }
       });
 
-      document.querySelector('#hair').setAttribute('hair', {});
+      document.querySelector('#hair-entity').setAttribute('hair', {});
     </script>
   </body>
 </html>

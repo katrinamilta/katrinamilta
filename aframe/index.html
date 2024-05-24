@@ -42,7 +42,10 @@
       <a-entity geometry="primitive: sphere; radius: 0.5" position="0 1 -2" material="color: #ffcc66"></a-entity>
       
       <!-- Particle System for Hair -->
-      <a-entity particle-system="preset: hair; particleCount: 5000" position="0 1 -2"></a-entity>
+      <a-entity position="0 1 -2">
+        <a-entity geometry="primitive: sphere; radius: 0.51" material="color: #331100"></a-entity>
+        <a-entity particle-system="preset: hair; particleCount: 5000" position="0 0 0"></a-entity>
+      </a-entity>
       
       <!-- Camera -->
       <a-entity id="camera" camera look-controls="max-pitch: 90" position="0 1.8 0"></a-entity>

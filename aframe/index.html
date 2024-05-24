@@ -12,7 +12,7 @@
   <body>
     <a-scene vr-mode-ui="enabled: false">
       <a-assets>
-        <img id="photo1" src="./zilumspng.png" class="hidden"> <!-- Ensure this is a JPEG file -->
+        <img id="photo1" src="./zilums.jpg" class="hidden"> <!-- Ensure this is a JPEG file -->
         <img id="photo2" src="./zilums1.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
         <img id="photo3" src="./zilums2.jpeg" class="hidden"> <!-- Ensure this is a JPEG file -->
       </a-assets>
@@ -42,7 +42,7 @@
       <a-entity geometry="primitive: sphere; radius: 0.5" position="0 1 -2" material="color: #ffcc66"></a-entity>
       
       <!-- Particle System for Hair -->
-      <a-entity particle-system="preset: hair; particleCount: 50000; velocityValue: 0.1; accelerationValue: 0.001" position="0 1 -2"></a-entity>
+      <a-entity particle-system="preset: hair; particleCount: 5000" position="0 1 -2"></a-entity>
       
       <!-- Camera -->
       <a-entity id="camera" camera look-controls="max-pitch: 90" position="0 1.8 0"></a-entity>

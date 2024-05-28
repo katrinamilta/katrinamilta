@@ -6,14 +6,11 @@
   <style>
     body {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      height: 100vh;
       margin: 0;
       background: #f0f0f0;
-    }
-    canvas {
-      display: block;
-      margin: 0; /* Remove any margin to position the canvas at the top */
     }
     #dice {
       display: flex;
@@ -93,10 +90,11 @@
         points.push(newPoint);
 
         // Draw the line with stylized brush stroke
-        let strokeWeightRandom = random(3, 5); // Randomize stroke weight within range
-        let brownHue = color(random(20, 60), 100, 100); // Randomize brown hue
-        strokeWeight(strokeWeightRandom + 2); // Set the stroke weight with additional 2 points
-        stroke(brownHue); // Set the stroke color with brown hue
+        let strokeWeightRandom = random(1, 3); // Randomize stroke weight within range
+        let opacityRandom = random(50, 150); // Randomize opacity
+        let alpha = map(opacityRandom, 50, 150, 50, 200); // Map opacity to alpha value
+        strokeWeight(strokeWeightRandom); // Set the stroke weight
+        stroke(0, alpha); // Set the stroke color with transparency
         if (points.length > 1) {
           let prevPoint = points[points.length - 2];
           line(prevPoint[0], prevPoint[1], newPoint[0], newPoint[1]);

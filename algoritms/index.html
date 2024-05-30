@@ -6,11 +6,14 @@
   <style>
     body {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
       margin: 0;
       background: #f0f0f0;
+    }
+    canvas {
+      display: block;
+      margin: 0; /* Remove any margin to position the canvas at the top */
     }
     #dice {
       display: flex;
@@ -45,10 +48,16 @@
     let canvasWidth = 800; // Define canvas width
     let canvasHeight = 600; // Define canvas height
     let dice1, dice2;
+    let bgImage; // Variable to store the background image
+
+    function preload() {
+      bgImage = loadImage('./zarka.JPG'); // Replace with the path to your image
+    }
 
     function setup() {
-      createCanvas(canvasWidth, canvasHeight);
-      background(255);
+      let canvas = createCanvas(canvasWidth, canvasHeight);
+      canvas.position(0, 0); // Position the canvas at the top of the screen
+      background(bgImage);
       stroke(0);
       fill(0);
 
@@ -90,11 +99,10 @@
         points.push(newPoint);
 
         // Draw the line with stylized brush stroke
-        let strokeWeightRandom = random(1, 3); // Randomize stroke weight within range
-        let opacityRandom = random(50, 150); // Randomize opacity
-        let alpha = map(opacityRandom, 50, 150, 50, 200); // Map opacity to alpha value
-        strokeWeight(strokeWeightRandom); // Set the stroke weight
-        stroke(0, alpha); // Set the stroke color with transparency
+        let strokeWeightRandom = random(3, 5); // Randomize stroke weight within range
+        let brownHue = color(random(20, 60), 100, 100); // Randomize brown hue
+        strokeWeight(strokeWeightRandom + 2); // Set the stroke weight with additional 2 points
+        stroke(brownHue); // Set the stroke color with brown hue
         if (points.length > 1) {
           let prevPoint = points[points.length - 2];
           line(prevPoint[0], prevPoint[1], newPoint[0], newPoint[1]);
@@ -117,6 +125,7 @@
         startY = 0;  // Reset starting y coordinate
         points = [[startX, startY]]; // Reset points array
         moveCount = 0; // Reset move count
+        background(bgImage); // Reset the background image
         redraw(); // Redraw the canvas
       }
     }

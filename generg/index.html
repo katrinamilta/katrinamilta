@@ -48,10 +48,15 @@
     let canvasWidth = 800; // Define canvas width
     let canvasHeight = 600; // Define canvas height
     let dice1, dice2;
+    let bgImage; // Variable to store the background image
+
+    function preload() {
+      bgImage = loadImage('path/to/your/image.jpg'); // Replace with the path to your image
+    }
 
     function setup() {
       createCanvas(canvasWidth, canvasHeight);
-      background(255);
+      background(bgImage);
       stroke(0);
       fill(0);
 
@@ -119,6 +124,7 @@
         startY = 0;  // Reset starting y coordinate
         points = [[startX, startY]]; // Reset points array
         moveCount = 0; // Reset move count
+        background(bgImage); // Reset the background image
         redraw(); // Redraw the canvas
       }
     }

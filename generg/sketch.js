@@ -16,7 +16,7 @@ frameRate=(10)}
    stroke(0, 90); //stars no 0/0 stura
         noFill ();
         strokeWeight(2);
-             bezier(0, 0, random(100), random(100), random(100), random(100), random(400), random(300));
+             bezier(0, 0, random(100), random(100), random(100), random(100), random(2000), random(2000));
 
     stroke(random(255), random(10)); //stars no 100/0 stura
         noFill ();

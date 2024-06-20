@@ -1521,10 +1521,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/kruasans.png", id:"Untitled_1_HTML5 Canvas_atlas_1"},
-		{src:"images/kaija.png", id:"Untitled_1_HTML5 Canvas_atlas_2"},
-		{src:"images/lazeris.png", id:"Untitled_1_HTML5 Canvas_atlas_3"},
-		{src:"images/tirgus.jpg", id:"Untitled_1_HTML5 Canvas_atlas_4"},
+		{src:"images/kruasans.png", id:"kruasans"},
+		{src:"images/kaija.png", id:"kaija"},
+		{src:"images/lazeris.png", id:"lazeris"},
+		{src:"images/tirgus.jpg", id:"tirgus"},
 		{src:"images/Untitled_1_HTML5 Canvas_atlas_5.png", id:"Untitled_1_HTML5 Canvas_atlas_5"},
 		{src:"images/Untitled_1_HTML5 Canvas_atlas_6.png", id:"Untitled_1_HTML5 Canvas_atlas_6"}
 	],

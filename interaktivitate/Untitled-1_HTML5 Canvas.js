@@ -3,10 +3,10 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"Untitled_1_HTML5 Canvas_atlas_1", frames: [[1644,417,384,93],[1142,512,384,93],[1230,417,412,93],[314,473,412,93],[1593,285,312,130],[1102,0,312,130],[1593,0,444,93],[1593,95,444,93],[1102,132,312,130],[602,341,312,130],[1528,512,384,93],[728,473,412,93],[0,452,312,130],[1593,190,444,93],[916,341,312,130],[602,282,989,57],[602,0,498,280],[0,0,600,450]]},
-		{name:"Untitled_1_HTML5 Canvas_atlas_2", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
-		{name:"Untitled_1_HTML5 Canvas_atlas_3", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
-		{name:"Untitled_1_HTML5 Canvas_atlas_4", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
+		{name:"kruasans", frames: [[1644,417,384,93],[1142,512,384,93],[1230,417,412,93],[314,473,412,93],[1593,285,312,130],[1102,0,312,130],[1593,0,444,93],[1593,95,444,93],[1102,132,312,130],[602,341,312,130],[1528,512,384,93],[728,473,412,93],[0,452,312,130],[1593,190,444,93],[916,341,312,130],[602,282,989,57],[602,0,498,280],[0,0,600,450]]},
+		{name:"kaija", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
+		{name:"lazeris", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
+		{name:"tirgus", frames: [[0,0,600,450],[602,0,600,450],[1204,0,600,450],[0,452,600,450],[0,904,600,450],[0,1356,600,450],[602,452,600,450],[1204,452,600,450],[602,904,600,450],[602,1356,600,450],[1204,904,600,450],[1204,1356,600,450]]},
 		{name:"Untitled_1_HTML5 Canvas_atlas_5", frames: [[0,0,959,680],[961,0,830,555],[961,557,600,450],[0,682,600,450],[0,1134,600,450],[0,1586,600,450],[602,1009,600,450],[602,1461,600,450],[1204,1009,600,450],[1204,1461,600,450]]},
 		{name:"Untitled_1_HTML5 Canvas_atlas_6", frames: [[0,0,2048,2048]]}
 ];
@@ -33,70 +33,70 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_42 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_41 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_40 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_39 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_38 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_37 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_36 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_35 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_34 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_33 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 

@@ -103,42 +103,42 @@ lib.ssMetadata = [
 
 
 (lib.CachedBmp_32 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_31 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_30 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_29 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(13);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_28 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.CachedBmp_27 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
@@ -152,7 +152,7 @@ lib.ssMetadata = [
 
 
 (lib.LaserBeamPNGClipart = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
@@ -474,7 +474,7 @@ lib.ssMetadata = [
 
 
 (lib.picmixcom_2342061_9 = function() {
-	this.initialize(ss["Untitled_1_HTML5 Canvas_atlas_1"]);
+	this.initialize(ss["kruasans"]);
 	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 

@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generative Art with Wingdings</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <title>Interactive p5.js Drawing with Dice Rolls</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background: #f0f0f0;
+    }
+    canvas {
+      display: block;
+      margin: 0; /* Remove any margin to position the canvas at the top */
+    }
+    #dice {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .dice {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #000;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-    <script src="sketch.js"></script>
+  <div id="dice">
+    <div class="dice" id="dice1">0</div>
+    <div class="dice" id="dice2">0</div>
+  </div>
+  <script src="sketch.js"></script>
 </body>
 </html>

@@ -1521,10 +1521,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Untitled_1_HTML5 Canvas_atlas_1.png", id:"Untitled_1_HTML5 Canvas_atlas_1"},
-		{src:"images/Untitled_1_HTML5 Canvas_atlas_2.png", id:"Untitled_1_HTML5 Canvas_atlas_2"},
-		{src:"images/Untitled_1_HTML5 Canvas_atlas_3.png", id:"Untitled_1_HTML5 Canvas_atlas_3"},
-		{src:"images/Untitled_1_HTML5 Canvas_atlas_4.png", id:"Untitled_1_HTML5 Canvas_atlas_4"},
+		{src:"images/kruasans.png", id:"Untitled_1_HTML5 Canvas_atlas_1"},
+		{src:"images/kaija.png", id:"Untitled_1_HTML5 Canvas_atlas_2"},
+		{src:"images/lazeris.png", id:"Untitled_1_HTML5 Canvas_atlas_3"},
+		{src:"images/tirgus.jpg", id:"Untitled_1_HTML5 Canvas_atlas_4"},
 		{src:"images/Untitled_1_HTML5 Canvas_atlas_5.png", id:"Untitled_1_HTML5 Canvas_atlas_5"},
 		{src:"images/Untitled_1_HTML5 Canvas_atlas_6.png", id:"Untitled_1_HTML5 Canvas_atlas_6"}
 	],

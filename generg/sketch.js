@@ -33,7 +33,7 @@ frameRate=(10)}
 
        stroke (random(255), random(10)); //stars no 0/50
        noFill ();
-       //bezier(0, windowHeight/2, random(600), random(600), random(200), random(200), random(2000), random(2000));
+       bezier(0, windowHeight/2, random(600), random(600), random(200), random(200), random(2000), random(2000));
 
        stroke (random(255), random(10)); //stars no 50/0
        noFill ();

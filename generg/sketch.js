@@ -64,7 +64,7 @@ function draw() {
 
   stroke(random(255), random(10)); //stars no 0/75
   noFill();
-  bezier(0, (windowHeight / 4) * 3, random(200), random(200), random(100), random(100), random(2000), random(2000));
+  //bezier(0, (windowHeight / 4) * 3, random(200), random(200), random(100), random(100), random(2000), random(2000));
 
   stroke(random(255), random(10)); //stars no 75/0
   noFill();

@@ -91,6 +91,10 @@ frameRate=(10)}
        noFill ();
        bezier((windowWidth/4)*3, (windowHeight/8)*6, random(200), random(200), random(100), random(100), random(2000), random(2000));
 
+       stroke (random(255), random(10)); //stars no 50/75
+       noFill ();
+       bezier(windowWidth/2, (windowHeight/4)*3, random(600), random(600), random(200), random(200), random(2000), random(2000));
+
   
 
 

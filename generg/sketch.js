@@ -95,6 +95,9 @@ frameRate=(10)}
        noFill ();
        bezier(windowWidth/2, (windowHeight/4)*3, random(600), random(600), random(200), random(200), random(2000), random(2000));
 
+       troke (random(255), random(10)); 
+       bezier((windowWidth/8)*5, (windowHeight/10)*4, random(600), random(600), random(200), random(200), random(2000), random(2000));
+
   
 
 

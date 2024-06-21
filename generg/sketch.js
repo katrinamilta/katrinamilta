@@ -86,6 +86,10 @@ frameRate=(10)}
        noFill ();
        bezier(windowWidth -200, (windowHeight/8)*3, random(200), random(200), random(100), random(100), random(2000), random(2000));
 
+       stroke (random(255), random(10)); 
+       noFill ();
+       bezier(windowWidth -300, (windowHeight/10)*2, random(200), random(200), random(100), random(100), random(2000), random(2000));
+
   
 
 
